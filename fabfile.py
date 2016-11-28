@@ -163,7 +163,7 @@ def setup_services_novenv():
     hacfg="""
 mqtt:
   broker: 127.0.0.1
-  port: 1883
+  port: 8883
   client_id: home-assistant-1
   username: pi
   password: raspberry
@@ -256,7 +256,7 @@ def setup_services():
     hacfg="""
 mqtt:
   broker: 127.0.0.1
-  port: 1883
+  port: 8883
   client_id: home-assistant-1
   username: pi
   password: raspberry
