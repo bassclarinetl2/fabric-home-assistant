@@ -1,5 +1,6 @@
 # fabric-home-assistant
 
+NOTE: This is a personal fork of the HASS Fabric Installer.  It has been modified to reflect my own port numbers.  In other words, this is not the fork you're looking for.
 
  ![image](images/hass_plu_fabric_logo.png)
 
@@ -11,7 +12,7 @@ The only requirement is that you have a Raspberry Pi with a fresh installation o
 *  Run the following command
 
 ```bash
-$ wget -Nnv https://raw.githubusercontent.com/home-assistant/fabric-home-assistant/master/hass_rpi_installer.sh && bash hass_rpi_installer.sh
+$ wget -Nnv https://raw.githubusercontent.com/bassclarinetl2/fabric-home-assistant/master/hass_rpi_installer.sh && bash hass_rpi_installer.sh
 ```
 *Note this command is one line and not run as sudo*
 
@@ -34,7 +35,7 @@ The All-In-One Installer script will do the following automatically:
 *  Setup a python virtualenv to run Home Assistant and components inside.
 *  Run as `hass` service account
 *  Install Home Assistant in a virtualenv
-*  Build and install Mosquitto from source with websocket support running on ports 1883 and 9001
+*  Build and install Mosquitto from source with websocket support running on ports 8883 and 9100
 *  Build and Install Python-openzwave in the Home Assistant virtualenv
 *  Build openzwave-control-panel in `/srv/hass/src/open-zwave-control-panel`
 *  Add both Home Assistant and Mosquitto to systemd services to start at boot
