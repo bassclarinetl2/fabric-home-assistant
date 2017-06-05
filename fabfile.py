@@ -12,14 +12,16 @@ import os
 
 
 env.hosts = ['localhost']
-env.user   = "pi"
-env.password = "raspberry"
+#env.user   = "whoami"
+#env.password = "raspberry"
 env.warn_only = True
 pi_hardware = os.uname()[4]
 
 #######################
 ## Core server setup ##
 #######################
+def pause():
+    input('Press <ENTER> to continue')
 
 def install_start():
     """ Notify of install start """
@@ -70,7 +72,7 @@ def install_start():
           Additional commands for upgrading should be run seperately. Please see the Github page for useage instructions""")
     time.sleep(10)
     print("Installer is starting...")
-    print("Your Raspberry Pi will reboot when the installer is complete.")
+    print("Your Banana will pause when installer is complete.")
     time.sleep(5)
 
 
@@ -319,7 +321,10 @@ def deploy():
     ## Build and install open-zwave-control-panel ##
     setup_openzwave_controlpanel()
 
-    ## Reboot the system ##
+    ## Wait for permission to reboot ##
+    pause()
+    
+    ## Reboot the system ##      
     reboot()
 
 
@@ -360,5 +365,8 @@ def deploy_novenv():
     ## Build and install open-zwave-control-panel ##
     setup_openzwave_controlpanel()
 
+    ## Wait for permission to reboot ##
+    pause()
+    
     ## Reboot the system ##
     reboot()
