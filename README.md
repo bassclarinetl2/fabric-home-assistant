@@ -1,6 +1,6 @@
 # fabric-home-assistant
 
-NOTE: This is a personal fork of the HASS Fabric Installer.  It has been modified to reflect my own port numbers.  In other words, this is not the fork you're looking for.
+NOTE: This is a personal fork of the HASS Fabric Installer.  It has been modified to reflect my banana pro.  In other words, this is not the fork you're looking for.
 
  ![image](images/hass_plu_fabric_logo.png)
 
