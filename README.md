@@ -1,10 +1,10 @@
 # fabric-home-assistant
 
-NOTE: This is a personal fork of the HASS Fabric Installer.  It has been modified to reflect my banana pro.  In other words, this is not the fork you're looking for.
+NOTE: This is a personal fork of the HASS Fabric Installer.  It has been modified to reflect my Banana Pro.  In other words, this is likley not the fork you're looking for.
 
  ![image](images/hass_plu_fabric_logo.png)
 
-This varant of the [Raspberry Pi All-In-One Installer (originally created by onathan Baginski)](https://github.com/home-assistant/fabric-home-assistant) deploys a complete Home Assistant server including support for MQTT with websockets, Z-Wave, and the Open-Zwave Control Panel.  As well as fixing permissions after copying in a backed up config and support for editing via sftp.
+This varant of the [Raspberry Pi All-In-One Installer (originally created by Jonathan Baginski)](https://github.com/home-assistant/fabric-home-assistant) deploys a complete Home Assistant server including support for MQTT with websockets, Z-Wave, and the Open-Zwave Control Panel.  As well as fixing permissions after copying in a backed up config and support for editing via sftp.
 
 The only requirement is that you have a Banana Pi/Pro with a fresh installation of [Armbian Server (Mainline kernel)](https://www.armbian.com/banana-pi-pro/) connected to your network.
 
