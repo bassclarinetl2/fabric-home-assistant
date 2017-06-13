@@ -131,7 +131,8 @@ def setup_users():
     sudo("usermod -G video -a homeassistant")
     sudo("usermod -d /home/homeassistant homeassistant")
     sudo("useradd --system sftpedit")
-    sudo("usermod -G homeassistant")
+    sudo("usermod -aG homeassistant sftpedit")
+    sudo("usermod -p `perl -e "print crypt("sftpedit","Q4")"` sftpedit")
 
 def install_syscore():
     """ Download and install Host Dependencies. """
@@ -413,6 +414,13 @@ ipchange.yaml
 def upgrade_homeassistant():
     """ Activate Venv, and upgrade Home Assistant to latest version """
     sudo("source /srv/homeassistant/homeassistant_venv/bin/activate && pip3 install homeassistant --upgrade", user="homeassistant")
+
+def fix_config_dir_permissions():
+    """ Set owner of config dir contents to homeassistant:homeassistant """
+    sudo("chown -R homeassistant:homeassistant /home/homeassistant/.homeassistant")
+
+    """ Grant read/write/exec permissions on config dir contents to homeassistant group (for sftpedit)"""
+    sudo("chmod -R g+wrx /home/homeassistant/.homeassistant/")
 
 #############
 ## Deploy! ##
