@@ -16,6 +16,7 @@ env.hosts = ['localhost']
 #env.password = "raspberry"
 env.warn_only = True
 pi_hardware = os.uname()[4]
+env.no_agent = True
 
 #######################
 ## Core server setup ##
@@ -250,7 +251,7 @@ mqttbkr: 127.0.0.1
     with settings(sudo_user='homeassistant'):
         sudo("/srv/homeassistant/homeassistant_venv/bin/hass --script ensure_config --config /home/homeassistant/.homeassistant")
     with settings(sudo_user='homeassistant'):
-        sudo("touch /home/homeassistant.homeassistant/secrets.yaml")
+        sudo("touch /home/homeassistant/.homeassistant/secrets.yaml")
 
     fabric.contrib.files.append("/home/homeassistant/.homeassistant/configuration.yaml", hacfg, use_sudo=True)
     fabric.contrib.files.append("/home/homeassistant/.homeassistant/secrets.yaml", mqttsec, use_sudo=True)
